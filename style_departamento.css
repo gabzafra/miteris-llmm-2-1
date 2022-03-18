@@ -205,16 +205,13 @@ a.btn-cart:hover {
   height: 3rem;
 }
 
-/* clases para mostrar solo el departamento actual */
-.enlace-departamento {
-  display: none;
-}
-
-.departamento-actual {
+.header-departs .nav-list .crumb {
   display: block;
+  margin: 0;
+  padding: 0 2px;
 }
 
-.departamento-actual a {
+.header-departs .nav-list a{
   color: var(--red-accent);
 }
 

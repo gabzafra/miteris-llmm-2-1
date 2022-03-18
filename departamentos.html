@@ -19,12 +19,12 @@
       <ul class="nav-list">
         <li><a class="gray-text-hover" href="#">Español</a></li>
         <li><a class="gray-text-hover hidden" href="#">Ingles</a></li>
-        <li><a class="gray-text-hover" href="#">Ayuda</a></li>
-        <li><a class="gray-text-hover" href="#">Contacto</a></li>
-        <li><a class="btn btn-join" href="#">Registro</a></li>
-        <li><a class="btn btn-login" href="#">Entrar</a></li>
+        <li><a class="gray-text-hover" href="./info.html">Ayuda</a></li>
+        <li><a class="gray-text-hover" href="./info.html">Contacto</a></li>
+        <li><a class="btn btn-join" href="./registro.html">Registro</a></li>
+        <li><a class="btn btn-login" href="./acceso.html">Entrar</a></li>
       </ul>
-      <a class="user-icon" href=""><img src="./images/user.png" alt="user" /></a>
+      <a class="user-icon" href="./user.html"><img src="./images/user.png" alt="user" /></a>
     </div>
     <div class="header-control">
       <a class="btn btn-cart" href="#"><span class="abr-btn-compra">VER </span>COMPRA</a>
@@ -37,21 +37,16 @@
       </form>
     </div>
     <div class="header-departs">
+      <!-- Esta lista debería funcionar como breadcrumbs una vez tenga JS -->
       <ul class="nav-list">
-        <li class="enlace-departamento departamento-actual">
-          <a class="gray-text-hover" href="#">ALIMENTACIÓN</a>
+        <li>
+          <a class="crumb" href="#">ALIMENTACIÓN</a>
         </li>
-        <li class="enlace-departamento">
-          <a class="gray-text-hover" href="#">LACTEOS</a>
+        <li>
+          <span class="crumb">\</span>
         </li>
-        <li class="enlace-departamento">
-          <a class="gray-text-hover" href="#">CONGELADOS</a>
-        </li>
-        <li class="enlace-departamento">
-          <a class="gray-text-hover" href="#">BEBIDAS</a>
-        </li>
-        <li class="enlace-departamento">
-          <a class="gray-text-hover" href="#">DROGUERÍA</a>
+        <li>
+          <a class="crumb" href="#">LEGUMBRES</a>
         </li>
       </ul>
     </div>
