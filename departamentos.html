@@ -16,7 +16,7 @@
         <a class="ham-menu" href="#"
           ><img src="./images/ham-menu.png" alt="menu"
         /></a>
-        <a href="#"><img src="./images/logo.png" alt="logo" /></a>
+        <a href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
         <ul class="nav-list">
           <li><a class="gray-text-hover" href="#">Español</a></li>
           <li><a class="gray-text-hover hidden" href="#">Ingles</a></li>
@@ -120,46 +120,173 @@
           </li>
         </ul>
       </aside>
-      <section class="contenedor-ofertas">
-        <article class="oferta">
-          <a href="#"
-            ><img src="./images/oferta_03.jpg" alt="cereales" />
-            <p class="btn add-basket green-nav dark-hover">VER</p>
-          </a>
-        </article>
-        <article class="oferta">
-          <a href="#"
-            ><img src="./images/oferta_04.jpg" alt="pizza" />
-            <p class="btn add-basket green-nav dark-hover">VER</p>
-          </a>
-        </article>
-        <article class="oferta">
-          <a href="#"
-            ><img src="./images/oferta_05.jpg" alt="pasta" />
-            <p class="btn add-basket green-nav dark-hover">VER</p>
-          </a>
-        </article>
-      </section>
-      <section class="destacados-seccion"></section>
-      <section class="listado-productos">
-        <article class="producto">
-          <a href="#"
-            ><img src="./images/alimentacion_01.jpg" alt="huevos"
-          /></a>
-          <h4>Huevos</h4>
-          <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-          <form class="disabled" action="/add-product" method="post">
-            <div class="quantity">
-              <button class="btn">-</button>
-              <input min="0" max="99" value="0" type="number" />
-              <button class="btn">+</button>
-            </div>
-            <button class="btn add-basket green-nav dark-hover" type="submit">
-              AÑADIR AL CARRO
-            </button>
-          </form>
-        </article>
-      </section>
+      <div class="escaparate">
+        <section class="contenedor-ofertas">
+          <article class="oferta">
+            <a href="#"
+              ><img src="./images/oferta_03.jpg" alt="cereales" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+          <article class="oferta">
+            <a href="#"
+              ><img src="./images/oferta_04.jpg" alt="pizza" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+          <article class="oferta">
+            <a href="#"
+              ><img src="./images/oferta_05.jpg" alt="pasta" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+        </section>
+        <section class="ofertas-destacadas">
+          <h2>PRODUCTOS DESTACADOS</h2>
+          <div class="listado-ofertas-destacadas">
+            <article class="oferta">
+              <a href="#"
+                ><img src="./images/oferta_03.jpg" alt="cereales" />
+                <p class="btn add-basket green-nav dark-hover">VER</p>
+              </a>
+            </article>
+            <article class="oferta">
+              <a href="#"
+                ><img src="./images/oferta_04.jpg" alt="pizza" />
+                <p class="btn add-basket green-nav dark-hover">VER</p>
+              </a>
+            </article>
+            <article class="oferta">
+              <a href="#"
+                ><img src="./images/oferta_05.jpg" alt="pasta" />
+                <p class="btn add-basket green-nav dark-hover">VER</p>
+              </a>
+            </article>
+            <article class="oferta">
+              <a href="#"
+                ><img src="./images/oferta_05.jpg" alt="pasta" />
+                <p class="btn add-basket green-nav dark-hover">VER</p>
+              </a>
+            </article>
+          </div>
+        </section>
+        <section class="listado-productos">
+          <div class="selector-orden">
+            <label for="ordenar">Ordenar por </label>
+            <select name="ordenar">
+              <option value="0">Nombre</option>
+              <option value="1">Oferta</option>
+              <option value="2">Menor precio</option>
+              <option value="3">Mayor precio</option>
+            </select>
+          </div>
+          <div class="productos-destacados">
+            <article class="producto">
+              <a href="#"
+                ><img src="./images/alimentacion_01.jpg" alt="huevos"
+              /></a>
+              <h4>Huevos</h4>
+              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+              <form class="disabled" action="/add-product" method="post">
+                <div class="quantity">
+                  <button class="btn">-</button>
+                  <input min="0" max="99" value="0" type="number" />
+                  <button class="btn">+</button>
+                </div>
+                <button
+                  class="btn add-basket green-nav dark-hover"
+                  type="submit"
+                >
+                  AÑADIR AL CARRO
+                </button>
+              </form>
+            </article>
+            <article class="producto">
+              <a href="#"
+                ><img src="./images/alimentacion_01.jpg" alt="huevos"
+              /></a>
+              <h4>Huevos</h4>
+              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+              <form class="disabled" action="/add-product" method="post">
+                <div class="quantity">
+                  <button class="btn">-</button>
+                  <input min="0" max="99" value="0" type="number" />
+                  <button class="btn">+</button>
+                </div>
+                <button
+                  class="btn add-basket green-nav dark-hover"
+                  type="submit"
+                >
+                  AÑADIR AL CARRO
+                </button>
+              </form>
+            </article>
+            <article class="producto">
+              <a href="#"
+                ><img src="./images/alimentacion_01.jpg" alt="huevos"
+              /></a>
+              <h4>Huevos</h4>
+              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+              <form class="disabled" action="/add-product" method="post">
+                <div class="quantity">
+                  <button class="btn">-</button>
+                  <input min="0" max="99" value="0" type="number" />
+                  <button class="btn">+</button>
+                </div>
+                <button
+                  class="btn add-basket green-nav dark-hover"
+                  type="submit"
+                >
+                  AÑADIR AL CARRO
+                </button>
+              </form>
+            </article>
+            <article class="producto">
+              <a href="#"
+                ><img src="./images/alimentacion_01.jpg" alt="huevos"
+              /></a>
+              <h4>Huevos</h4>
+              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+              <form class="disabled" action="/add-product" method="post">
+                <div class="quantity">
+                  <button class="btn">-</button>
+                  <input min="0" max="99" value="0" type="number" />
+                  <button class="btn">+</button>
+                </div>
+                <button
+                  class="btn add-basket green-nav dark-hover"
+                  type="submit"
+                >
+                  AÑADIR AL CARRO
+                </button>
+              </form>
+            </article>
+            <article class="producto">
+              <a href="#"
+                ><img src="./images/alimentacion_01.jpg" alt="huevos"
+              /></a>
+              <h4>Huevos</h4>
+              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+              <form class="disabled" action="/add-product" method="post">
+                <div class="quantity">
+                  <button class="btn">-</button>
+                  <input min="0" max="99" value="0" type="number" />
+                  <button class="btn">+</button>
+                </div>
+                <button
+                  class="btn add-basket green-nav dark-hover"
+                  type="submit"
+                >
+                  AÑADIR AL CARRO
+                </button>
+              </form>
+            </article>
+          </div>
+          <p class="paginas-busqueda">
+            <a href="#">Anterior</a> 1 de 13 <a href="#">Siguiente</a>
+          </p>
+        </section>
+      </div>
     </div>
     <footer>
       <div class="enlaces-ayuda">

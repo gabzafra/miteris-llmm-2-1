@@ -222,49 +222,39 @@ a.btn-cart:hover {
 
 .contenedor-principal {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas:
-    "columna-busqueda contenedor-ofertas contenedor-ofertas contenedor-ofertas contenedor-ofertas"
-    "columna-busqueda destacados-seccion destacados-seccion destacados-seccion destacados-seccion"
-    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
-    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
-    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
-    "columna-busqueda listado-productos listado-productos listado-productos listado-productos";
+  grid-auto-flow: row;
+  grid-template-areas: "columna-busqueda escaparate";
 }
+
 .columna-busqueda {
   grid-area: columna-busqueda;
 }
+
+.escaparate {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contenedor-ofertas"
+    "ofertas-destacadas"
+    "listado-productos";
+  grid-area: escaparate;
+}
+
 .contenedor-ofertas {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 1em;
-  grid-template-areas: ". . .";
   grid-area: contenedor-ofertas;
-  margin: 1em;
 }
-.destacados-seccion {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . . ."
-    ". . . .";
-  grid-area: destacados-seccion;
+
+.ofertas-destacadas {
+  grid-area: ofertas-destacadas;
 }
+
 .listado-productos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    ". . . ."
-    ". . . ."
-    ". . . ."
-    ". . . .";
   grid-area: listado-productos;
 }
 
@@ -337,7 +327,6 @@ y modificado para adaptarlo al estilo de la página */
   cursor: pointer;
   height: 0;
   width: 0;
-
 }
 
 /* Create a custom radio button */
@@ -380,9 +369,17 @@ y modificado para adaptarlo al estilo de la página */
 
 /*------------- 4.OFERTAS -------------*/
 
-
+.contenedor-ofertas {
+  display: flex;
+  gap: 1em;
+  margin: 1em;
+}
 .oferta {
   text-align: center;
+}
+
+.oferta a {
+  display: block;
 }
 
 .oferta img {
@@ -390,11 +387,40 @@ y modificado para adaptarlo al estilo de la página */
 }
 
 .oferta p {
-  margin-top: 1em;
+  margin: 0;
   line-height: 2em;
 }
 
+/*------------- 4.DESTACADAS -------------*/
+
+.ofertas-destacadas {
+  text-align: center;
+}
+
+.ofertas-destacadas h2 {
+  margin: 0 auto 0.5em auto;
+  width: 90%;
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+  line-height: 2em;
+  color: var(--red-accent);
+
+}
+
+.ofertas-destacadas div.listado-ofertas-destacadas {
+  display: flex;
+  gap: 1em;
+}
+
 /*------------- 5.PRODUCTOS -------------*/
+
+.selector-orden {
+  text-align: right;
+  margin: 0 auto 0.5em auto;
+  padding-top: 1em;
+  width: 90%;
+  border-top: 1px solid var(--light-gray);  
+}
 
 .productos-destacados {
   display: flex;
@@ -407,7 +433,7 @@ y modificado para adaptarlo al estilo de la página */
 
 .producto {
   border: 1px solid var(--light-gray);
-  flex-basis: 100%;
+  flex-basis: 24%;
 }
 
 .producto img {
@@ -476,6 +502,21 @@ input[type="number"] {
 
 .quantity input {
   font-weight: 400;
+}
+
+.listado-productos .paginas-busqueda {
+  margin: 1em auto;
+  width: 90%;
+  border-top: 1px solid var(--light-gray);
+  line-height: 2em;
+  text-align: center;
+  letter-spacing: .2em;
+}
+
+.listado-productos .paginas-busqueda a {
+  text-decoration: underline;
+  padding: 1em;
+  font-weight: 500;
 }
 
 /*------------- 6.FOOTER -------------*/
@@ -608,16 +649,16 @@ footer {
   .productos-destacados {
     padding: 0;
   }
-  .producto {
+  /* .producto {
     flex-basis: 49%;
-  }
+  } */
 }
 
 @media (min-width: 700px) {
-  .producto {
+  /* .producto {
     flex-basis: 29%;
-  }
-  .contendor-ofertas {
+  } */
+  .contenedor-ofertas {
     grid-template-columns: 1fr 1fr;
   }
   .ham-menu,
@@ -630,7 +671,7 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .producto {
+  /* .producto {
     flex-basis: 19%;
-  }
+  } */
 }
