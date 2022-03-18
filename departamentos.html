@@ -1,451 +1,413 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>FRESH market</title>
-    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style_departamento.css" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  </head>
 
-  <body>
-    <header>
-      <div class="header-nav">
-        <a class="ham-menu" href="#"
-          ><img src="./images/ham-menu.png" alt="menu"
-        /></a>
-        <a href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
-        <ul class="nav-list">
-          <li><a class="gray-text-hover" href="#">Español</a></li>
-          <li><a class="gray-text-hover hidden" href="#">Ingles</a></li>
-          <li><a class="gray-text-hover" href="#">Ayuda</a></li>
-          <li><a class="gray-text-hover" href="#">Contacto</a></li>
-          <li><a class="btn btn-join" href="#">Registro</a></li>
-          <li><a class="btn btn-login" href="#">Entrar</a></li>
-        </ul>
-        <a class="user-icon" href=""
-          ><img src="./images/user.png" alt="user"
-        /></a>
-      </div>
-      <div class="header-control">
-        <a class="btn btn-cart" href="#"
-          ><span class="abr-btn-compra">VER </span>COMPRA</a
-        >
-        <form class="disabled" action="/search" method="post">
-          <button class="btn-close" type="submit">X</button>
-          <input
-            type="text"
-            name="search-field"
-            placeholder="Buscar producto.."
-          />
-          <button class="mag-glass" type="submit">
-            <img src="./images/magnifying-glass.png" alt="mag glass icon" />
-          </button>
-        </form>
-      </div>
-      <div class="header-departs">
-        <ul class="nav-list">
-          <li class="enlace-departamento departamento-actual">
-            <a class="gray-text-hover" href="#">ALIMENTACIÓN</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="#">LACTEOS</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="#">CONGELADOS</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="#">BEBIDAS</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="#">DROGUERÍA</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <div class="contenedor-principal">
-      <aside class="columna-busqueda">
-        <ul class="lista-secciones">
-          <li>
-            <a href="#">Alimentación</a>
-            <ul>
-              <li><a href="#">Aceites</a></li>
-              <li><a href="#">Carnes</a></li>
-              <li><a href="#">Conservas de carne</a></li>
-              <li><a href="#">Huevos</a></li>
-              <li class="seccion-actual"><a href="#">Legumbres</a></li>
-              <li><a href="#">Pastas y masas</a></li>
-              <li><a href="#">Platos preparados</a></li>
-              <li><a href="#">Salsas</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Desayuno</a></li>
-          <li><a href="#">Lacteos</a></li>
-          <li><a href="#">Congelados</a></li>
-          <li><a href="#">Bebidas</a></li>
-          <li><a href="#">Perfumería</a></li>
-          <li><a href="#">Droguería</a></li>
-        </ul>
-        <a class="imagen-promocional" href="#"><img src="./images/oferta_01.jpg" alt="promoción" /></a>
-        <ul class="lista-filtros">
-          <li>
-            <h3>Marca</h3>
-            <form action="" method="">
-              <label class="container"
-                >El Hostal
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Luengo
-                <input type="radio" checked="checked" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >La Asturiana
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Cidacos
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Aranca
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-            </form>
-          </li>
-          <li>
-            <h3>Tipo</h3>
-            <form action="" method="">
-              <label class="container"
-                >Garbanzo
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Lenteja
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Alubia blanca
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Alubia pinta
-                <input type="radio" checked="checked" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-            </form>
-          </li>
-          <li>
-            <h3>Formato</h3>
-            <form action="" method="">
-              <label class="container"
-                >Seca
-                <input type="radio" checked="checked" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Conserva
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Al vacio
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-            </form>
-          </li>
-          <li>
-            <h3>Categoría</h3>
-            <form action="" method="">
-              <label class="container"
-                >Ecológica
-                <input type="radio"" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Comercio justo
-                <input type="radio" checked="checked name="radio" />
-                <span class="checkmark"></span>
-              </label>
-              <label class="container"
-                >Importación
-                <input type="radio" name="radio" />
-                <span class="checkmark"></span>
-              </label>
-            </form>
-          </li>
-        </ul>
-      </aside>
-      <div class="escaparate">
-        <section class="contenedor-ofertas">
-          <article class="oferta">
-            <a href="#"
-              ><img src="./images/oferta_03.jpg" alt="cereales" />
-              <p class="btn add-basket green-nav dark-hover">VER</p>
-            </a>
-          </article>
-          <article class="oferta">
-            <a href="#"
-              ><img src="./images/oferta_04.jpg" alt="pizza" />
-              <p class="btn add-basket green-nav dark-hover">VER</p>
-            </a>
-          </article>
-          <article class="oferta">
-            <a href="#"
-              ><img src="./images/oferta_05.jpg" alt="pasta" />
-              <p class="btn add-basket green-nav dark-hover">VER</p>
-            </a>
-          </article>
-        </section>
-        <section class="ofertas-destacadas">
-          <h2>PRODUCTOS DESTACADOS</h2>
-          <div class="listado-ofertas-destacadas">
-            <article class="oferta">
-              <a href="#"
-                ><img src="./images/alimentacion_02.jpg" alt="pollo" />
-                <p class="btn add-basket green-nav dark-hover">VER</p>
-              </a>
-            </article>
-            <article class="oferta">
-              <a href="#"
-                ><img src="./images/alimentacion_03.jpg" alt="cerdo" />
-                <p class="btn add-basket green-nav dark-hover">VER</p>
-              </a>
-            </article>
-            <article class="oferta">
-              <a href="#"
-                ><img src="./images/alimentacion_04.jpg" alt="naranjas" />
-                <p class="btn add-basket green-nav dark-hover">VER</p>
-              </a>
-            </article>
-            <article class="oferta">
-              <a href="#"
-                ><img src="./images/alimentacion_05.jpg" alt="lechuga" />
-                <p class="btn add-basket green-nav dark-hover">VER</p>
-              </a>
-            </article>
-          </div>
-        </section>
-        <section class="listado-productos">
-          <div class="selector-orden">
-            <label for="ordenar">Ordenar por </label>
-            <select name="ordenar">
-              <option value="0">Nombre</option>
-              <option value="1">Oferta</option>
-              <option value="2">Menor precio</option>
-              <option value="3">Mayor precio</option>
-            </select>
-          </div>
-          <div class="productos-destacados">
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_01.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_02.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_03.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_04.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_05.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_06.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_07.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-            <article class="producto">
-              <a href="#"
-                ><img src="./images/legumbre_08.jpg" alt="huevos"
-              /></a>
-              <h4>Huevos</h4>
-              <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-              <form class="disabled" action="/add-product" method="post">
-                <div class="quantity">
-                  <button class="btn">-</button>
-                  <input min="0" max="99" value="0" type="number" />
-                  <button class="btn">+</button>
-                </div>
-                <button
-                  class="btn add-basket green-nav dark-hover"
-                  type="submit"
-                >
-                  AÑADIR AL CARRO
-                </button>
-              </form>
-            </article>
-          </div>
-          
-          <p class="paginas-busqueda">
-            <a href="#">Anterior</a> 1 de 13 <a href="#">Siguiente</a>
-          </p>
-        </section>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>FRESH market</title>
+  <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style_departamento.css" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+</head>
+
+<body>
+  <header>
+    <div class="header-nav">
+      <a class="ham-menu" href="#"><img src="./images/ham-menu.png" alt="menu" /></a>
+      <a href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
+      <ul class="nav-list">
+        <li><a class="gray-text-hover" href="#">Español</a></li>
+        <li><a class="gray-text-hover hidden" href="#">Ingles</a></li>
+        <li><a class="gray-text-hover" href="#">Ayuda</a></li>
+        <li><a class="gray-text-hover" href="#">Contacto</a></li>
+        <li><a class="btn btn-join" href="#">Registro</a></li>
+        <li><a class="btn btn-login" href="#">Entrar</a></li>
+      </ul>
+      <a class="user-icon" href=""><img src="./images/user.png" alt="user" /></a>
     </div>
-    <footer>
-      <div class="enlaces-ayuda">
-        <div class="enlaces-ayuda-list">
-          <h4>Ayuda</h4>
-          <ul>
-            <li><a href="#">Mi cuenta</a></li>
-            <li><a href="#">Medios de pago</a></li>
-            <li><a href="#">Devolución y reenbolso</a></li>
-            <li><a href="#">Terminos de uso</a></li>
-          </ul>
-        </div>
-        <p class="telefono">Telefono: <span>666 555 444</span></p>
-      </div>
-      <ul class="social-list">
-        <li>
-          <a href="#"><img src="./images/001-facebook.png" alt="Facebook" /></a>
+    <div class="header-control">
+      <a class="btn btn-cart" href="#"><span class="abr-btn-compra">VER </span>COMPRA</a>
+      <form class="disabled" action="/search" method="post">
+        <button class="btn-close" type="submit">X</button>
+        <input type="text" name="search-field" placeholder="Buscar producto.." />
+        <button class="mag-glass" type="submit">
+          <img src="./images/magnifying-glass.png" alt="mag glass icon" />
+        </button>
+      </form>
+    </div>
+    <div class="header-departs">
+      <ul class="nav-list">
+        <li class="enlace-departamento departamento-actual">
+          <a class="gray-text-hover" href="#">ALIMENTACIÓN</a>
         </li>
-        <li>
-          <a href="#"><img src="./images/002-twitter.png" alt="Twitter" /></a>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="#">LACTEOS</a>
         </li>
-        <li>
-          <a href="#"
-            ><img src="./images/003-instagram.png" alt="Instagram"
-          /></a>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="#">CONGELADOS</a>
         </li>
-        <li>
-          <a href="#"><img src="./images/004-whatsapp.png" alt="WhatsApp" /></a>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="#">BEBIDAS</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="#">DROGUERÍA</a>
         </li>
       </ul>
-      <p>© 2022, Gabriel Zafra</p>
-    </footer>
-  </body>
+    </div>
+  </header>
+  <!-- El aside con el carro de la compra se mostraría con JS -->
+  <aside class="cesta">
+    <table>
+      <caption>Mi Compra</caption>
+      <tr>
+        <th>Producto</td>
+        <th>ud</td>
+        <th>Precio</td>
+        </th>
+      <tr>
+        <td><a href="./producto.html">Huevos</a></td>
+        <td>2</td>
+        <td>3.56€</td>
+      </tr>
+      <tr>
+        <td><a href="./producto.html">Pizza barbacoa</a></td>
+        <td>1</td>
+        <td>4.43€</td>
+      </tr>
+      <tr>
+        <td><a href="./producto.html">Leche</a></td>
+        <td>6</td>
+        <td>5.95€</td>
+      </tr>
+      <tr>
+        <td>Total:</td>
+        <td colspan="2">13.94€</td>
+      </tr>
+    </table>
+    <div class="cesta-control">
+      <button>Volver</button>
+      <button>Pagar</button>
+    </div>
+  </aside>
+  <div class="contenedor-principal">
+    <div class="columna-busqueda">
+      <ul class="lista-secciones">
+        <li>
+          <a href="#">Alimentación</a>
+          <ul>
+            <li><a href="#">Aceites</a></li>
+            <li><a href="#">Carnes</a></li>
+            <li><a href="#">Conservas de carne</a></li>
+            <li><a href="#">Huevos</a></li>
+            <li class="seccion-actual"><a href="#">Legumbres</a></li>
+            <li><a href="#">Pastas y masas</a></li>
+            <li><a href="#">Platos preparados</a></li>
+            <li><a href="#">Salsas</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Desayuno</a></li>
+        <li><a href="#">Lacteos</a></li>
+        <li><a href="#">Congelados</a></li>
+        <li><a href="#">Bebidas</a></li>
+        <li><a href="#">Perfumería</a></li>
+        <li><a href="#">Droguería</a></li>
+      </ul>
+      <a class="imagen-promocional" href="#"><img src="./images/oferta_01.jpg" alt="promoción" /></a>
+      <ul class="lista-filtros">
+        <li>
+          <h3>Marca</h3>
+          <form action="" method="">
+            <label class="container">El Hostal
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Luengo
+              <input type="radio" checked="checked" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">La Asturiana
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Cidacos
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Aranca
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </li>
+        <li>
+          <h3>Tipo</h3>
+          <form action="" method="">
+            <label class="container">Garbanzo
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Lenteja
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Alubia blanca
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Alubia pinta
+              <input type="radio" checked="checked" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </li>
+        <li>
+          <h3>Formato</h3>
+          <form action="" method="">
+            <label class="container">Seca
+              <input type="radio" checked="checked" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Conserva
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Al vacio
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </li>
+        <li>
+          <h3>Categoría</h3>
+          <form action="" method="">
+            <label class="container">Ecológica
+              <input type="radio"" name=" radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Comercio justo
+              <input type="radio" checked="checked name=" radio" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Importación
+              <input type="radio" name="radio" />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div class="escaparate">
+      <section class="contenedor-ofertas">
+        <article class="oferta">
+          <a href="#"><img src="./images/oferta_03.jpg" alt="cereales" />
+            <p class="btn add-basket green-nav dark-hover">VER</p>
+          </a>
+        </article>
+        <article class="oferta">
+          <a href="#"><img src="./images/oferta_04.jpg" alt="pizza" />
+            <p class="btn add-basket green-nav dark-hover">VER</p>
+          </a>
+        </article>
+        <article class="oferta">
+          <a href="#"><img src="./images/oferta_05.jpg" alt="pasta" />
+            <p class="btn add-basket green-nav dark-hover">VER</p>
+          </a>
+        </article>
+      </section>
+      <section class="ofertas-destacadas">
+        <h2>PRODUCTOS DESTACADOS</h2>
+        <div class="listado-ofertas-destacadas">
+          <article class="oferta">
+            <a href="#"><img src="./images/alimentacion_02.jpg" alt="pollo" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+          <article class="oferta">
+            <a href="#"><img src="./images/alimentacion_03.jpg" alt="cerdo" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+          <article class="oferta">
+            <a href="#"><img src="./images/alimentacion_04.jpg" alt="naranjas" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+          <article class="oferta">
+            <a href="#"><img src="./images/alimentacion_05.jpg" alt="lechuga" />
+              <p class="btn add-basket green-nav dark-hover">VER</p>
+            </a>
+          </article>
+        </div>
+      </section>
+      <section class="listado-productos">
+        <div class="selector-orden">
+          <label for="ordenar">Ordenar por </label>
+          <select name="ordenar">
+            <option value="0">Nombre</option>
+            <option value="1">Oferta</option>
+            <option value="2">Menor precio</option>
+            <option value="3">Mayor precio</option>
+          </select>
+        </div>
+        <div class="productos-destacados">
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_01.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_02.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_03.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_04.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_05.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_06.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_07.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+          <article class="producto">
+            <a href="#"><img src="./images/legumbre_08.jpg" alt="huevos" /></a>
+            <h4>Huevos</h4>
+            <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+            <form class="disabled" action="/add-product" method="post">
+              <div class="quantity">
+                <button class="btn">-</button>
+                <input min="0" max="99" value="0" type="number" />
+                <button class="btn">+</button>
+              </div>
+              <button class="btn add-basket green-nav dark-hover" type="submit">
+                AÑADIR AL CARRO
+              </button>
+            </form>
+          </article>
+        </div>
+
+        <p class="paginas-busqueda">
+          <a href="#">Anterior</a> 1 de 13 <a href="#">Siguiente</a>
+        </p>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <div class="enlaces-ayuda">
+      <div class="enlaces-ayuda-list">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Mi cuenta</a></li>
+          <li><a href="#">Medios de pago</a></li>
+          <li><a href="#">Devolución y reenbolso</a></li>
+          <li><a href="#">Terminos de uso</a></li>
+        </ul>
+      </div>
+      <p class="telefono">Telefono: <span>666 555 444</span></p>
+    </div>
+    <ul class="social-list">
+      <li>
+        <a href="#"><img src="./images/001-facebook.png" alt="Facebook" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/002-twitter.png" alt="Twitter" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/003-instagram.png" alt="Instagram" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="./images/004-whatsapp.png" alt="WhatsApp" /></a>
+      </li>
+    </ul>
+    <p>© 2022, Gabriel Zafra</p>
+  </footer>
+</body>
+
 </html>
