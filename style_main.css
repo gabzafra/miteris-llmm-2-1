@@ -206,6 +206,71 @@ a.btn-cart:hover {
   height: 3rem;
 }
 
+/*------------- CARRO COMPRA -------------*/
+
+.cesta {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: 1em;
+  background-color: var(--green-accent);
+  color: #fff;
+}
+
+.cesta table caption {
+  font-weight: 600;
+  font-size: 1.2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+}
+
+.cesta table td {
+  white-space: nowrap;
+}
+
+.cesta table td a {
+  color: #fff;
+}
+
+.cesta table th {
+  font-weight: 500;
+  line-height: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #fff;
+}
+
+.cesta table td,
+.cesta table th {
+  padding: 10px 1em;
+  text-align: right;
+}
+
+.cesta table td:first-child,
+.cesta table th:first-child {
+  text-align: left;
+}
+
+.cesta table tr:last-child {
+  font-weight: 600;
+}
+
+.cesta .cesta-control {
+  text-align: right;
+}
+
+.cesta .cesta-control button {
+  background-color: var(--green-accent);
+  padding: 5px 20px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cesta .cesta-control button:hover {
+  cursor: pointer;
+}
+
 /*------------- 4.OFERTAS -------------*/
 
 .contendor-ofertas {
@@ -475,7 +540,6 @@ footer {
     font-size: 2em;
   }
 }
-
 
 @media (min-width: 600px) {
   .ofertas-nav {
