@@ -201,9 +201,17 @@ a.btn-cart:hover {
 }
 
 .header-departs {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 3rem;
+}
+.header-departs > a {
+  margin-right: 1em;
+}
+
+.titulo-menu {
+  display: none;
 }
 
 /*------------- CARRO COMPRA -------------*/
@@ -528,9 +536,33 @@ footer {
     display: none;
   }
 
-  .enlace-departamento {
+  /* css para sacar la lista de departamentos con el menu hamburguesa */
+  .header-departs .nav-list {
+    /* falta JS para mostrarlo cuando se pulsa el menu hamburguesa */
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: var(--green-accent);
+    padding: 1em;
   }
+
+  .header-departs .titulo-menu {
+    display: initial;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2em;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1em;
+  }
+
+  .header-departs .nav-list a {
+    color: #fff;
+    line-height: 2em;
+  }
+  
   .ham-menu img,
   .user-icon img {
     display: block;
@@ -538,6 +570,7 @@ footer {
   }
   .accent-red {
     font-size: 2em;
+    padding: 0;
   }
 }
 
