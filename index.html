@@ -1,269 +1,255 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>FRESH market</title>
-    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style_main.css" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  </head>
 
-  <body>
-    <header>
-      <div class="header-nav">
-        <!-- falta JS para hacer aparacer el menu -->
-        <a class="ham-menu" href="#"
-          ><img src="./images/ham-menu.png" alt="menu"
-        /></a>
-        <a href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
-        <ul class="nav-list">
-          <!-- falta JS para alternar el idioma -->
-          <li>
-            <a class="gray-text-hover" href="#">Español</a>
-          </li>
-          <li>
-            <a class="gray-text-hover hidden" href="#">Ingles</a>
-          </li>
-          <li>
-            <a class="gray-text-hover" href="./ayuda.html">Ayuda</a>
-          </li>
-          <li>
-            <a class="gray-text-hover" href="./contacto.html">Contacto</a>
-          </li>
-          <li>
-            <a class="btn btn-join" href="./registro.html">Registro</a>
-          </li>
-          <li>
-            <a class="btn btn-login" href="./acceso.html">Entrar</a>
-          </li>
-        </ul>
-        <!-- falta JS para hacer aparecer el menu -->
-        <a class="user-icon" href="#"
-          ><img src="./images/user.png" alt="user"
-        /></a>
+<head>
+  <meta charset="UTF-8" />
+  <title>FRESH market</title>
+  <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style_main.css" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+</head>
+
+<body>
+  <header>
+    <div class="header-nav">
+      <!-- falta JS para hacer aparacer el menu -->
+      <a class="ham-menu" href="#"><img src="./images/ham-menu.png" alt="menu" /></a>
+      <a href="./index.html"><img src="./images/logo.png" alt="logo" /></a>
+      <ul class="nav-list">
+        <!-- falta JS para alternar el idioma -->
+        <li>
+          <a class="gray-text-hover" href="#">Español</a>
+        </li>
+        <li>
+          <a class="gray-text-hover hidden" href="#">Ingles</a>
+        </li>
+        <li>
+          <a class="gray-text-hover" href="./ayuda.html">Ayuda</a>
+        </li>
+        <li>
+          <a class="gray-text-hover" href="./contacto.html">Contacto</a>
+        </li>
+        <li>
+          <a class="btn btn-join" href="./registro.html">Registro</a>
+        </li>
+        <li>
+          <a class="btn btn-login" href="./acceso.html">Entrar</a>
+        </li>
+      </ul>
+      <!-- falta JS para hacer aparecer el menu -->
+      <a class="user-icon" href="#"><img src="./images/user.png" alt="user" /></a>
+    </div>
+    <div class="header-control">
+      <!-- falta JS para hacer aparecer la cesta de la compra -->
+      <a class="btn btn-cart" href="#"><span class="abr-btn-compra">VER </span>COMPRA</a>
+      <!-- esta desactivado el puntero por comodidad mediante la clase disabled -->
+      <form class="disabled" action="#" method="">
+        <button class="btn-close" type="submit">X</button>
+        <input type="text" name="search-field" placeholder="Buscar producto.." />
+        <button class="mag-glass" type="submit">
+          <img src="./images/magnifying-glass.png" alt="mag glass icon" />
+        </button>
+      </form>
+    </div>
+    <div class="header-departs">
+      <ul class="nav-list">
+        <!-- todos apuntan al ejemplo de pagina de departamento -->
+        <li>
+          <a class="accent-red red-text-hover-glow" href="./departamentos.html">HOY EN OFERTA</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="./departamentos.html">ALIMENTACIÓN</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="./departamentos.html">LACTEOS</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="./departamentos.html">CONGELADOS</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="./departamentos.html">BEBIDAS</a>
+        </li>
+        <li class="enlace-departamento">
+          <a class="gray-text-hover" href="./departamentos.html">DROGUERÍA</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <aside class="cesta">
+    <table>
+      <caption>Mi Compra</caption>
+      <tr>
+        <th>Producto</td>
+        <th>ud</td>
+        <th>Precio</td>
+        </th>
+      <tr>
+        <td><a href="./producto.html">Huevos</a></td>
+        <td>2</td>
+        <td>3.56 €</td>
+      </tr>
+      <tr>
+        <td><a href="./producto.html">Pizza barbacoa</a></td>
+        <td>1</td>
+        <td>4.43 €</td>
+      </tr>
+      <tr>
+        <td><a href="./producto.html">Leche</a></td>
+        <td>6</td>
+        <td>5.95 €</td>
+      </tr>
+      <tr>
+        <td>Total:</td>
+        <td colspan="2">13.94 €</td>
+      </tr>
+    </table>
+    <div>
+      <button class="pagar">Pagar</button>
+    </div>
+  </aside>
+  <section class="contendor-ofertas">
+    <!-- estan apuntados a la página de ejemplo de departamento ya que es la que presentaría una busqueda filtrada  -->
+    <article class="oferta">
+      <a href="./departamentos.html"><img src="./images/oferta_01.jpg" alt="oferta aceite" /></a>
+      <div class="oferta-content">
+        <p>Del 10 al 23 de marzo de 2020</p>
+        <h3>OFERTAS</h3>
+        <a href="./departamentos.html">MILES DE OFERTAS EN PRODUCTOS DE ALIMENTACIÓN Y DROGUERÍA</a>
       </div>
-      <div class="header-control">
-        <!-- falta JS para hacer aparecer la cesta de la compra -->
-        <a class="btn btn-cart" href="#"
-          ><span class="abr-btn-compra">VER </span>COMPRA</a
-        >
-        <!-- esta desactivado el puntero por comodidad mediante la clase disabled -->
-        <form class="disabled" action="#" method="">
-          <button class="btn-close" type="submit">X</button>
-          <input
-            type="text"
-            name="search-field"
-            placeholder="Buscar producto.."
-          />
-          <button class="mag-glass" type="submit">
-            <img src="./images/magnifying-glass.png" alt="mag glass icon" />
-          </button>
-        </form>
+    </article>
+    <article class="oferta">
+      <a href="./departamentos.html"><img src="./images/oferta_02.jpg" alt="oferta cerveza" /></a>
+      <div class="oferta-content">
+        <p>Del 10 al 23 de marzo de 2020</p>
+        <h3>25% EN CERVEZAS</h3>
+        <a href="./departamentos.html">VER CERVEZAS</a>
       </div>
-      <div class="header-departs">
-        <ul class="nav-list">
-          <!-- todos apuntan al ejemplo de pagina de departamento -->
-          <li>
-            <a
-              class="accent-red red-text-hover-glow"
-              href="./departamentos.html"
-              >HOY EN OFERTA</a
-            >
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="./departamentos.html"
-              >ALIMENTACIÓN</a
-            >
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="./departamentos.html">LACTEOS</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="./departamentos.html"
-              >CONGELADOS</a
-            >
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="./departamentos.html">BEBIDAS</a>
-          </li>
-          <li class="enlace-departamento">
-            <a class="gray-text-hover" href="./departamentos.html">DROGUERÍA</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <section class="contendor-ofertas">
+    </article>
+  </section>
+  <section>
+    <ul class="ofertas-nav">
       <!-- estan apuntados a la página de ejemplo de departamento ya que es la que presentaría una busqueda filtrada  -->
-      <article class="oferta">
-        <a href="./departamentos.html"
-          ><img src="./images/oferta_01.jpg" alt="oferta aceite"
-        /></a>
-        <div class="oferta-content">
-          <p>Del 10 al 23 de marzo de 2020</p>
-          <h3>OFERTAS</h3>
-          <a href="./departamentos.html"
-            >MILES DE OFERTAS EN PRODUCTOS DE ALIMENTACIÓN Y DROGUERÍA</a
-          >
+      <li>
+        <a class="green-nav dark-hover" href="./departamentos.html">OFERTAS EN ALIMENTACIÓN</a>
+      </li>
+      <li>
+        <a class="blue-nav dark-hover" href="./departamentos.html">OFERTAS EN CONGELADOS</a>
+      </li>
+      <li>
+        <a class="pink-nav dark-hover" href="./departamentos.html">OFERTAS EN DROGUERÍA</a>
+      </li>
+    </ul>
+  </section>
+  <section class="productos-destacados">
+    <!-- todos apuntan a la página de ejemplo de detalle de producto -->
+    <article class="producto">
+      <a href="./producto.html"><img src="./images/alimentacion_01.jpg" alt="huevos" /></a>
+      <h4>Huevos</h4>
+      <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+      <!-- el puntero esta desactivado con la clase disbled para que sea mas comodo -->
+      <form class="disabled" action="#" method="">
+        <div class="quantity">
+          <button class="btn">-</button>
+          <input min="0" max="99" value="0" type="number" />
+          <button class="btn">+</button>
         </div>
-      </article>
-      <article class="oferta">
-        <a href="./departamentos.html"
-          ><img src="./images/oferta_02.jpg" alt="oferta cerveza"
-        /></a>
-        <div class="oferta-content">
-          <p>Del 10 al 23 de marzo de 2020</p>
-          <h3>25% EN CERVEZAS</h3>
-          <a href="./departamentos.html">VER CERVEZAS</a>
+        <button class="btn add-basket green-nav dark-hover" type="submit">
+          AÑADIR AL CARRO
+        </button>
+      </form>
+    </article>
+    <article class="producto">
+      <a href="./producto.html"><img src="./images/lacteo_01.jpg" alt="leche" /></a>
+      <h4>Leche</h4>
+      <p>0.65 <span class="simbolo-euro">€/ud</span></p>
+      <form class="disabled" action="#" method="">
+        <div class="quantity">
+          <button class="btn">-</button>
+          <input min="0" max="99" value="0" type="number" />
+          <button class="btn">+</button>
         </div>
-      </article>
-    </section>
-    <section>
-      <ul class="ofertas-nav">
-        <!-- estan apuntados a la página de ejemplo de departamento ya que es la que presentaría una busqueda filtrada  -->
-        <li>
-          <a class="green-nav dark-hover" href="./departamentos.html"
-            >OFERTAS EN ALIMENTACIÓN</a
-          >
-        </li>
-        <li>
-          <a class="blue-nav dark-hover" href="./departamentos.html"
-            >OFERTAS EN CONGELADOS</a
-          >
-        </li>
-        <li>
-          <a class="pink-nav dark-hover" href="./departamentos.html"
-            >OFERTAS EN DROGUERÍA</a
-          >
-        </li>
-      </ul>
-    </section>
-    <section class="productos-destacados">
-      <!-- todos apuntan a la página de ejemplo de detalle de producto -->
-      <article class="producto">
-        <a href="./producto.html"
-          ><img src="./images/alimentacion_01.jpg" alt="huevos"
-        /></a>
-        <h4>Huevos</h4>
-        <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-        <!-- el puntero esta desactivado con la clase disbled para que sea mas comodo -->
-        <form class="disabled" action="#" method="">
-          <div class="quantity">
-            <button class="btn">-</button>
-            <input min="0" max="99" value="0" type="number" />
-            <button class="btn">+</button>
-          </div>
-          <button class="btn add-basket green-nav dark-hover" type="submit">
-            AÑADIR AL CARRO
-          </button>
-        </form>
-      </article>
-      <article class="producto">
-        <a href="./producto.html"
-          ><img src="./images/lacteo_01.jpg" alt="leche"
-        /></a>
-        <h4>Leche</h4>
-        <p>0.65 <span class="simbolo-euro">€/ud</span></p>
-        <form class="disabled" action="#" method="">
-          <div class="quantity">
-            <button class="btn">-</button>
-            <input min="0" max="99" value="0" type="number" />
-            <button class="btn">+</button>
-          </div>
-          <button class="btn add-basket green-nav dark-hover" type="submit">
-            AÑADIR AL CARRO
-          </button>
-        </form>
-      </article>
-      <article class="producto">
-        <a href="./producto.html"
-          ><img src="./images/congelado_01.jpg" alt="espinacas"
-        /></a>
-        <h4>Espinacas</h4>
-        <p>10.10 <span class="simbolo-euro">€/ud</span></p>
-        <form class="disabled" action="#" method="">
-          <div class="quantity">
-            <button class="btn">-</button>
-            <input min="0" max="99" value="0" type="number" />
-            <button class="btn">+</button>
-          </div>
-          <button class="btn add-basket green-nav dark-hover" type="submit">
-            AÑADIR AL CARRO
-          </button>
-        </form>
-      </article>
-      <article class="producto">
-        <a href="./producto.html"
-          ><img src="./images/drogueria_01.jpg" alt="champu"
-        /></a>
-        <h4>Champú</h4>
-        <p>2.2 <span class="simbolo-euro">€/ud</span></p>
-        <form class="disabled" action="#" method="">
-          <div class="quantity">
-            <button class="btn">-</button>
-            <input min="0" max="99" value="0" type="number" />
-            <button class="btn">+</button>
-          </div>
-          <button class="btn add-basket green-nav dark-hover" type="submit">
-            AÑADIR AL CARRO
-          </button>
-        </form>
-      </article>
-      <article class="producto">
-        <a href="./producto.html"
-          ><img src="./images/bebida_01.jpg" alt="cerveza"
-        /></a>
-        <h4>Cerveza</h4>
-        <p>3.30 <span class="simbolo-euro">€/ud</span></p>
-        <form class="disabled" action="#" method="">
-          <div class="quantity">
-            <button class="btn">-</button>
-            <input min="0" max="99" value="0" type="number" />
-            <button class="btn">+</button>
-          </div>
-          <button class="btn add-basket green-nav dark-hover" type="submit">
-            AÑADIR AL CARRO
-          </button>
-        </form>
-      </article>
-    </section>
-    <footer>
-      <div class="enlaces-ayuda">
-        <div class="enlaces-ayuda-list">
-          <h4>Ayuda</h4>
-          <ul>
-            <li><a href="./user-info.html">Mi cuenta</a></li>
-            <li><a href="./medios-pago.html">Medios de pago</a></li>
-            <li><a href="./devolucion.html">Devolución y reenbolso</a></li>
-            <li><a href="./terminos.html">Terminos de uso</a></li>
-          </ul>
+        <button class="btn add-basket green-nav dark-hover" type="submit">
+          AÑADIR AL CARRO
+        </button>
+      </form>
+    </article>
+    <article class="producto">
+      <a href="./producto.html"><img src="./images/congelado_01.jpg" alt="espinacas" /></a>
+      <h4>Espinacas</h4>
+      <p>10.10 <span class="simbolo-euro">€/ud</span></p>
+      <form class="disabled" action="#" method="">
+        <div class="quantity">
+          <button class="btn">-</button>
+          <input min="0" max="99" value="0" type="number" />
+          <button class="btn">+</button>
         </div>
-        <p class="telefono">Telefono: <span>666 555 444</span></p>
+        <button class="btn add-basket green-nav dark-hover" type="submit">
+          AÑADIR AL CARRO
+        </button>
+      </form>
+    </article>
+    <article class="producto">
+      <a href="./producto.html"><img src="./images/drogueria_01.jpg" alt="champu" /></a>
+      <h4>Champú</h4>
+      <p>2.2 <span class="simbolo-euro">€/ud</span></p>
+      <form class="disabled" action="#" method="">
+        <div class="quantity">
+          <button class="btn">-</button>
+          <input min="0" max="99" value="0" type="number" />
+          <button class="btn">+</button>
+        </div>
+        <button class="btn add-basket green-nav dark-hover" type="submit">
+          AÑADIR AL CARRO
+        </button>
+      </form>
+    </article>
+    <article class="producto">
+      <a href="./producto.html"><img src="./images/bebida_01.jpg" alt="cerveza" /></a>
+      <h4>Cerveza</h4>
+      <p>3.30 <span class="simbolo-euro">€/ud</span></p>
+      <form class="disabled" action="#" method="">
+        <div class="quantity">
+          <button class="btn">-</button>
+          <input min="0" max="99" value="0" type="number" />
+          <button class="btn">+</button>
+        </div>
+        <button class="btn add-basket green-nav dark-hover" type="submit">
+          AÑADIR AL CARRO
+        </button>
+      </form>
+    </article>
+  </section>
+  <footer>
+    <div class="enlaces-ayuda">
+      <div class="enlaces-ayuda-list">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="./user-info.html">Mi cuenta</a></li>
+          <li><a href="./medios-pago.html">Medios de pago</a></li>
+          <li><a href="./devolucion.html">Devolución y reenbolso</a></li>
+          <li><a href="./terminos.html">Terminos de uso</a></li>
+        </ul>
       </div>
-      <ul class="social-list">
-        <li>
-          <a href="https://www.facebook.com" target="_blank"
-            ><img src="./images/001-facebook.png" alt="Facebook"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank"
-            ><img src="./images/002-twitter.png" alt="Twitter"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com" target="_blank"
-            ><img src="./images/003-instagram.png" alt="Instagram"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.whatsapp.com" target="_blank"
-            ><img src="./images/004-whatsapp.png" alt="WhatsApp"
-          /></a>
-        </li>
-      </ul>
-      <p>© 2022, Gabriel Zafra</p>
-    </footer>
-  </body>
+      <p class="telefono">Telefono: <span>666 555 444</span></p>
+    </div>
+    <ul class="social-list">
+      <li>
+        <a href="https://www.facebook.com" target="_blank"><img src="./images/001-facebook.png" alt="Facebook" /></a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" target="_blank"><img src="./images/002-twitter.png" alt="Twitter" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" target="_blank"><img src="./images/003-instagram.png" alt="Instagram" /></a>
+      </li>
+      <li>
+        <a href="https://www.whatsapp.com" target="_blank"><img src="./images/004-whatsapp.png" alt="WhatsApp" /></a>
+      </li>
+    </ul>
+    <p>© 2022, Gabriel Zafra</p>
+  </footer>
+</body>
+
 </html>
