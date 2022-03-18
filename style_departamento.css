@@ -240,9 +240,10 @@ a.btn-cart:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
+  gap: 0px 1em;
   grid-template-areas: ". . .";
   grid-area: contenedor-ofertas;
+  margin: 1em;
 }
 .destacados-seccion {
   display: grid;
@@ -379,70 +380,18 @@ y modificado para adaptarlo al estilo de la página */
 
 /*------------- 4.OFERTAS -------------*/
 
-.contendor-ofertas {
-  display: grid;
-  padding: 10px 20px;
-  grid-template-columns: 1fr;
-  gap: 40px;
+
+.oferta {
+  text-align: center;
 }
 
 .oferta img {
   width: 100%;
 }
 
-.oferta-content {
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.oferta-content p {
-  font-size: 0.7em;
-  color: var(--light-gray);
+.oferta p {
+  margin-top: 1em;
   line-height: 2em;
-}
-
-.oferta-content h3 {
-  font-size: 2em;
-  line-height: 1.5em;
-  font-weight: 400;
-}
-
-.oferta-content a {
-  text-decoration: underline;
-  line-height: 2.5em;
-}
-
-.ofertas-nav {
-  display: grid;
-  padding: 5px;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.ofertas-nav li a {
-  display: block;
-  margin: 0 auto;
-  padding: 1.5em;
-  text-align: center;
-  max-width: 300px;
-}
-
-.green-nav {
-  background-color: rgb(198, 225, 161);
-  color: rgb(75, 106, 30);
-}
-
-.blue-nav {
-  background-color: rgb(190, 222, 255);
-  color: rgb(65, 101, 142);
-}
-
-.pink-nav {
-  background-color: rgb(255, 205, 205);
-  color: rgb(142, 85, 85);
 }
 
 /*------------- 5.PRODUCTOS -------------*/
@@ -596,6 +545,11 @@ footer {
 
 .accent-red {
   color: var(--red-accent);
+}
+
+.green-nav {
+  background-color: rgb(198, 225, 161);
+  color: rgb(75, 106, 30);
 }
 
 .dark-hover:hover {
