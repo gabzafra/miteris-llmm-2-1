@@ -1,0 +1,682 @@
+/*
+	1.IMPORTS
+	2.DEFAULTS
+	3.HEADER
+	4.OFERTAS
+	5.PRODUCTOS
+	6.FOOTER
+  7.UTILS
+  8.MEDIA RESPONSIVE
+*/
+
+/*------------- 1.IMPORTS -------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap");
+
+/*------------- 2.DEFAULTS -------------*/
+
+:root {
+  --red-accent: #fb3c43;
+  --green-accent: #138d23;
+  --grey-background: #f2f2f2;
+  --light-gray: #d3d3d3;
+  --bright-red: #ff0008;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Poppins";
+  font-size: 14px;
+  background: #fff;
+}
+
+h1,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h3 {
+  color: var(--red-accent);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: 0px;
+}
+
+/* Esta clase disabled la he puesto en los forms que no funcionan bien por no poder
+gestionar su comportamiento con JS. Por ejemplo el campo de busqueda deberia usar
+AJAX y los botones + - para establecer la cantidad de productos e incluir productos
+en la cesta necesitan interceptar eventos.
+Se puede quitar para ver el comportamiento del puntero, pero el clickar hara que el
+form intente hacer un request para el que no esta preparado y de un 405*/
+.disabled {
+  pointer-events: none;
+}
+
+/*------------- 3.HEADER -------------*/
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+
+header div {
+  display: flex;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.header-nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+  padding: 15px 20px 10px 20px;
+  font-size: 9px;
+}
+
+.header-nav img {
+  margin: 0 5px;
+  width: 80px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list li a {
+  margin-right: 12px;
+  font-weight: 400;
+}
+
+.btn {
+  margin: 5px;
+  padding: 5px 15px;
+}
+
+.nav-list li a.btn-login {
+  margin-right: 0;
+  color: var(--grey-background);
+  background-color: var(--red-accent);
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  opacity: 0.5;
+  transition: opacity 150ms ease-in;
+}
+
+.nav-list li a.btn-join {
+  border: 1px solid #9a9a9a;
+  font-weight: 600;
+}
+
+a.btn-join:hover {
+  opacity: 0.5;
+  transition: opacity 150ms ease-in;
+}
+
+.header-control {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  height: 36px;
+  padding: 4px 20px 4px 20px;
+  font-size: 9px;
+  background-color: var(--light-gray);
+}
+
+a.btn-cart {
+  display: block;
+  padding-bottom: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--grey-background);
+  background-color: var(--green-accent);
+}
+
+a.btn-cart:hover {
+  color: var(--green-accent);
+  background-color: var(--grey-background);
+  border: 1px solid var(--green-accent);
+}
+
+.header-control img {
+  height: 100%;
+  padding: 6px 10px 6px 0;
+}
+
+.header-control form {
+  display: flex;
+  width: 70%;
+  background-color: var(--grey-background);
+}
+
+.header-control form button {
+  padding: 0 11px;
+  background-color: var(--grey-background);
+}
+
+.header-control form button:hover {
+  cursor: pointer;
+}
+
+.btn-close {
+  border-right: 1px solid var(--light-gray);
+  font-size: 2em;
+  font-family: "Poppins";
+  font-weight: normal;
+  color: var(--light-gray);
+}
+
+.header-control form input {
+  width: 100%;
+  border: 0;
+  padding: 0 5px;
+  font-weight: 400;
+  font-style: italic;
+  background-color: var(--grey-background);
+}
+
+.header-control form .mag-glass {
+  width: 30px;
+  margin: 0 5px 0 10px;
+}
+
+.header-departs {
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+/* clases para mostrar solo el departamento actual */
+.enlace-departamento {
+  display: none;
+}
+
+.departamento-actual {
+  display: block;
+}
+
+.departamento-actual a {
+  color: var(--red-accent);
+}
+
+/*------------- LAYOUT PRINCIPAL -------------*/
+
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "columna-busqueda contenedor-ofertas contenedor-ofertas contenedor-ofertas contenedor-ofertas"
+    "columna-busqueda destacados-seccion destacados-seccion destacados-seccion destacados-seccion"
+    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
+    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
+    "columna-busqueda listado-productos listado-productos listado-productos listado-productos"
+    "columna-busqueda listado-productos listado-productos listado-productos listado-productos";
+}
+.columna-busqueda {
+  grid-area: columna-busqueda;
+}
+.contenedor-ofertas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  grid-area: contenedor-ofertas;
+}
+.destacados-seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". . . .";
+  grid-area: destacados-seccion;
+}
+.listado-productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
+  grid-area: listado-productos;
+}
+
+/*-------- COLUMNA DE BUSQUEDA --------*/
+
+.columna-busqueda {
+  min-width: 200px;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.lista-secciones {
+  border-bottom: 1px solid var(--light-gray);
+  margin: 1em 0;
+  padding-bottom: 1em;
+}
+
+.lista-secciones li > ul {
+  margin-left: 2em;
+  font-size: 0.78em;
+  font-weight: 400;
+}
+
+.lista-secciones li.seccion-actual a {
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 1.3em;
+  color: var(--red-accent);
+}
+
+.columna-busqueda > a {
+  width: 200px;
+}
+
+.columna-busqueda > a img {
+  width: 100%;
+}
+
+.lista-filtros {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid var(--light-gray);
+}
+.lista-filtros form {
+  padding: 5px 2px;
+}
+
+/* Radio buttons tomado de https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+y modificado para adaptarlo al estilo de la página */
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+/* Create a custom radio button */
+.checkmark {
+  margin-top: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ddd;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 1px;
+  left: 1px;
+  width: 11px;
+  height: 11px;
+  background: #111;
+}
+
+/*------------- 4.OFERTAS -------------*/
+
+.contendor-ofertas {
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.oferta img {
+  width: 100%;
+}
+
+.oferta-content {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.oferta-content p {
+  font-size: 0.7em;
+  color: var(--light-gray);
+  line-height: 2em;
+}
+
+.oferta-content h3 {
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+.oferta-content a {
+  text-decoration: underline;
+  line-height: 2.5em;
+}
+
+.ofertas-nav {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.ofertas-nav li a {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5em;
+  text-align: center;
+  max-width: 300px;
+}
+
+.green-nav {
+  background-color: rgb(198, 225, 161);
+  color: rgb(75, 106, 30);
+}
+
+.blue-nav {
+  background-color: rgb(190, 222, 255);
+  color: rgb(65, 101, 142);
+}
+
+.pink-nav {
+  background-color: rgb(255, 205, 205);
+  color: rgb(142, 85, 85);
+}
+
+/*------------- 5.PRODUCTOS -------------*/
+
+.productos-destacados {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 10px;
+}
+
+.producto {
+  border: 1px solid var(--light-gray);
+  flex-basis: 100%;
+}
+
+.producto img {
+  padding: 3px;
+  width: 100%;
+}
+
+.producto h4 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+
+.producto p {
+  text-align: center;
+  font-size: 2em;
+  color: var(--red-accent);
+}
+
+.simbolo-euro {
+  font-size: 0.5em;
+  color: var(--light-gray);
+}
+
+.producto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto form button.add-basket {
+  width: 100%;
+  margin: 0;
+  line-height: 2.5em;
+}
+
+/* https://stackoverflow.com/questions/45396280/customizing-increment-arrows-on-input-of-type-number-using-css 
+modificado para manipular los botones + - de los campos number de un formulario*/
+.quantity {
+  display: flex;
+  justify-content: center;
+  width: 160px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.quantity input[type="number"]::-webkit-inner-spin-button,
+.quantity input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity input,
+.quantity button {
+  width: 1.5em;
+  padding: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+}
+
+.quantity input {
+  font-weight: 400;
+}
+
+/*------------- 6.FOOTER -------------*/
+
+footer {
+  background-color: #fff;
+  margin-top: 2em;
+  border-top: 1px solid var(--light-gray);
+  line-height: 4em;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+.enlaces-ayuda {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.enlaces-ayuda-list {
+  text-align: left;
+}
+
+.enlaces-ayuda-list h4 {
+  color: #000;
+}
+
+.enlaces-ayuda-list ul {
+  line-height: 2em;
+}
+
+.enlaces-ayuda-list ul a {
+  color: var(--light-gray);
+}
+
+.enlaces-ayuda p.telefono {
+  font-size: 1.5em;
+}
+
+.enlaces-ayuda p.telefono span {
+  color: var(--green-accent);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+}
+
+.social-list img {
+  width: 3em;
+  filter: saturate(0);
+  border-radius: 50%;
+  box-shadow: 0px 10px 13px -7px #000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.social-list img:hover {
+  filter: saturate(100%);
+  transition: all 200ms ease-in;
+}
+/*------------- 7.UTILS -------------*/
+
+.hidden {
+  display: none;
+}
+
+.accent-red {
+  color: var(--red-accent);
+}
+
+.dark-hover:hover {
+  filter: brightness(90%);
+  transition: all 150ms ease-in;
+}
+
+.red-text-hover-glow:hover {
+  color: var(--bright-red);
+  text-shadow: 0px 0px 5px rgba(251, 60, 67, 0.8);
+  transition: color 150ms ease-in;
+}
+
+.gray-text-hover:hover {
+  color: var(--light-gray);
+  transition: color 150ms ease-in;
+}
+
+/*------------- 8.MEDIA RESPONSIVE -------------*/
+
+@media (max-width: 600px) {
+  .abr-btn-compra {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .enlaces-ayuda {
+    flex-direction: column;
+  }
+
+  .enlaces-ayuda-list {
+    text-align: center;
+  }
+  .header-nav .nav-list {
+    display: none;
+  }
+
+  .enlace-departamento {
+    display: none;
+  }
+  .ham-menu img,
+  .user-icon img {
+    display: block;
+    width: 2em;
+  }
+  .accent-red {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 600px) {
+  .ofertas-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .productos-destacados {
+    padding: 0;
+  }
+  .producto {
+    flex-basis: 49%;
+  }
+}
+
+@media (min-width: 700px) {
+  .producto {
+    flex-basis: 29%;
+  }
+  .contendor-ofertas {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ham-menu,
+  .user-icon {
+    display: none;
+  }
+  .header-control {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .producto {
+    flex-basis: 19%;
+  }
+}
