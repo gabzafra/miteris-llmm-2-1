@@ -63,9 +63,10 @@ gestionar su comportamiento con JS. Por ejemplo el campo de busqueda deberia usa
 AJAX y los botones + - para establecer la cantidad de productos e incluir productos
 en la cesta necesitan interceptar eventos.
 Se puede quitar para ver el comportamiento del puntero, pero el clickar hara que el
-form intente hacer un request para el que no esta preparado y de un 405*/
+form intente hacer un request para el que no esta preparado y de un 405 o recargue
+la página molestando la navegación*/
 .disabled {
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 /*------------- 3.HEADER -------------*/
