@@ -265,6 +265,7 @@ a.btn-cart:hover {
   font-size: 0.8em;
   line-height: 1.8em;
   font-weight: 500;
+  padding-left: 1em;
 }
 
 .lista-secciones {
