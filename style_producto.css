@@ -403,11 +403,22 @@ y modificado para adaptarlo al estilo de la página */
 /*------------- 5.PRODUCTOS -------------*/
 
 .producto {
+  padding: 10% 2em;
+  display: flex;
+  flex-wrap: wrap;
   background-color: aquamarine;
 }
 
-.producto img {
-  width: 60%;
+.producto .contenedor-imagen {
+  width: 50%;
+}
+
+.producto .contenedor-imagen img {
+  width: 100%;
+}
+
+.producto .contenedor-info {
+  width: 50%;
 }
 
 .producto h4 {
