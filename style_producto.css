@@ -504,6 +504,7 @@ input[type="number"] {
   font-size: 1.3em;
   display: inline;
   border-bottom: 1px solid var(--light-gray);
+  line-height: 2.5em;
 }
 
 .producto .info-extendida p {
