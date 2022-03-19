@@ -406,11 +406,10 @@ y modificado para adaptarlo al estilo de la página */
   padding: 10% 2em;
   display: flex;
   flex-wrap: wrap;
-  background-color: aquamarine;
 }
 
 .producto .contenedor-imagen {
-  width: 50%;
+  width: 60%;
 }
 
 .producto .contenedor-imagen img {
@@ -418,19 +417,30 @@ y modificado para adaptarlo al estilo de la página */
 }
 
 .producto .contenedor-info {
-  width: 50%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .producto h4 {
   text-align: center;
-  font-size: 1.5em;
-  padding: 0.5em 0;
+  font-size: 2em;
 }
 
-.producto p {
+.producto .contenedor-info p {
   text-align: center;
-  font-size: 2em;
+  line-height: 2em;
+}
+
+.precio {
   color: var(--red-accent);
+  font-size: 2em;
+}
+
+.producto-descripcion {
+  color: var(--light-gray);
 }
 
 .simbolo-euro {
@@ -439,6 +449,7 @@ y modificado para adaptarlo al estilo de la página */
 }
 
 .producto form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -481,6 +492,26 @@ input[type="number"] {
 }
 
 .quantity input {
+  font-weight: 400;
+}
+
+.producto .info-extendida {
+  padding: 5px;
+  line-height: 2em;
+}
+
+.producto .info-extendida h3 {
+  font-size: 1.3em;
+  display: inline;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.producto .info-extendida p {
+  font-weight: 600;
+}
+
+.producto .info-extendida span {
+  padding-left: 1em;
   font-weight: 400;
 }
 
@@ -598,9 +629,6 @@ footer {
   .user-icon img {
     display: block;
     width: 2em;
-  }
-  .accent-red {
-    font-size: 2em;
   }
 
   /* Sacamos la columna de busqueda para el menu hamburguesa */
