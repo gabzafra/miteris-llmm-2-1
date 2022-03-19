@@ -612,6 +612,24 @@ footer {
   .abr-btn-compra {
     display: none;
   }
+
+  .producto {
+    padding: 10% 2em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .producto .contenedor-imagen {
+    width: 100%;
+  }
+  
+  .producto .contenedor-imagen img {
+    width: 100%;
+  }
+  
+  .producto .contenedor-info {
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
