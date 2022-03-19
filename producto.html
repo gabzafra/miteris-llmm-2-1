@@ -7,7 +7,7 @@
     <title>FRESH market</title>
     <link rel="icon" href="./images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style_departamento.css" />
+    <link rel="stylesheet" href="./style_producto.css" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 </head>
 
@@ -36,7 +36,7 @@
                 </button>
             </form>
         </div>
-        <sec class="header-departs">
+        <div class="header-departs">
             <!-- Esta lista debería funcionar como breadcrumbs una vez tenga JS -->
             <ul class="nav-list">
                 <li>
@@ -55,7 +55,7 @@
                     <a class="crumb" href="./departamentos.html">Congelado 02</a>
                 </li>
             </ul>
-            </div>
+        </div>
     </header>
     <!-- El aside con el carro de la compra se mostraría con JS -->
     <aside class="cesta">
@@ -92,8 +92,114 @@
         </div>
     </aside>
     <section class="contenedor-principal">
-        <article class="producto">
-            <a href="./producto.html"><img src="./images/congelado_02.jpg" alt="congelado 2" /></a>
+        <div class="columna-busqueda">
+            <ul class="lista-secciones">
+              <li>
+                <a href="./departamentos.html">Alimentación</a>
+                <ul>
+                  <li><a href="./departamentos.html">Aceites</a></li>
+                  <li><a href="./departamentos.html">Carnes</a></li>
+                  <li><a href="./departamentos.html">Conservas de carne</a></li>
+                  <li><a href="./departamentos.html">Huevos</a></li>
+                  <li class="seccion-actual"><a href="./departamentos.html">Legumbres</a></li>
+                  <li><a href="./departamentos.html">Pastas y masas</a></li>
+                  <li><a href="./departamentos.html">Platos preparados</a></li>
+                  <li><a href="./departamentos.html">Salsas</a></li>
+                </ul>
+              </li>
+              <li><a href="./departamentos.html">Desayuno</a></li>
+              <li><a href="./departamentos.html">Lacteos</a></li>
+              <li><a href="./departamentos.html">Congelados</a></li>
+              <li><a href="./departamentos.html">Bebidas</a></li>
+              <li><a href="./departamentos.html">Perfumería</a></li>
+              <li><a href="./departamentos.html">Droguería</a></li>
+            </ul>
+            <a class="imagen-promocional" href="./departamentos.html"><img src="./images/oferta_01.jpg" alt="promoción" /></a>
+            <ul class="lista-filtros">
+              <li>
+                <h3>Marca</h3>
+                <form action="" method="">
+                  <label class="container">El Hostal
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Luengo
+                    <input type="radio" checked="checked" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">La Asturiana
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Cidacos
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Aranca
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                </form>
+              </li>
+              <li>
+                <h3>Tipo</h3>
+                <form action="" method="">
+                  <label class="container">Garbanzo
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Lenteja
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Alubia blanca
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Alubia pinta
+                    <input type="radio" checked="checked" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                </form>
+              </li>
+              <li>
+                <h3>Formato</h3>
+                <form action="" method="">
+                  <label class="container">Seca
+                    <input type="radio" checked="checked" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Conserva
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Al vacio
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                </form>
+              </li>
+              <li>
+                <h3>Categoría</h3>
+                <form action="" method="">
+                  <label class="container">Ecológica
+                    <input type="radio"" name=" radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Comercio justo
+                    <input type="radio" checked="checked name=" radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">Importación
+                    <input type="radio" name="radio" />
+                    <span class="checkmark"></span>
+                  </label>
+                </form>
+              </li>
+            </ul>
+          </div>
+        <div class="producto">
+            <a href="./producto.html"><img src="./images/legumbre_04.jpg" alt="congelado 2" /></a>
             <h4>Congelado 02</h4>
             <p>2.35 <span class="simbolo-euro">€/ud</span></p>
             <form class="disabled" action="#" method="">
@@ -106,7 +212,7 @@
                     AÑADIR AL CARRO
                 </button>
             </form>
-        </article>
+        </div>
     </section>
     <footer>
         <div class="enlaces-ayuda">
