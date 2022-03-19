@@ -199,6 +199,13 @@ a.btn-cart:hover {
   margin: 0 5px 0 10px;
 }
 
+.bienvenida p {
+  width: 100%;
+  line-height: 3em;
+  color: var(--red-accent);
+  text-align: center;
+}
+
 /*------------- CARRO COMPRA -------------*/
 
 .cesta {
@@ -264,6 +271,48 @@ a.btn-cart:hover {
 .cesta .cesta-control button:hover {
   cursor: pointer;
 }
+
+/*------------- INFO USUARIO -------------*/
+
+
+
+.contenedor-principal {
+  padding: 1em;
+}
+
+.contenedor-principal h2 {
+  line-height: 2em;
+  color: var(--red-accent);
+}
+
+.contenedor-principal p {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.contenedor-principal span {
+  font-weight: 500;
+  padding-right: 1em;
+}
+
+.datos-usuario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.datos-usuario .data-container {
+  align-self: flex-start;
+}
+
+.datos-usuario .image-container {
+  width: 300px;
+}
+
+.datos-usuario img{
+  width: 100%;
+}
+
 
 /*------------- 6.FOOTER -------------*/
 
@@ -361,9 +410,25 @@ footer {
   .abr-btn-compra {
     display: none;
   }
+
+  .contenedor-principal {
+    text-align: center;
+  }
+
+  .datos-usuario {
+    flex-direction: column;
+  }
+
+  .datos-usuario .data-container {
+    align-self: center;
+  }
 }
 
 @media (max-width: 700px) {
+  .datos-usuario .image-container {
+    width: 200px;
+  }
+
   .enlaces-ayuda {
     flex-direction: column;
   }
