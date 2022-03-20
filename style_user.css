@@ -2,8 +2,8 @@
 	1.IMPORTS
 	2.DEFAULTS
 	3.HEADER
-    3.1 CARRO COMPRA
-	4. INFO USUARIO
+    3.1.CARRO COMPRA
+	4.INFO USUARIO
 	5.FOOTER
   6.UTILS
   7.MEDIA RESPONSIVE
@@ -53,7 +53,7 @@ más molestos para poder desactivar los efectos de puntero para paliarlo */
   /* pointer-events: none; */
 }
 
-/*------------- 3.HEADER -------------*/
+/*-------------- 3.HEADER -------------*/
 
 header {
   position: sticky;
@@ -191,7 +191,7 @@ a.btn-cart:hover {
   text-align: center;
 }
 
-/*------------- 3.1 CARRO COMPRA -------------*/
+/*---------- 3.1.CARRO COMPRA ---------*/
 
 .cesta {
   /* falta JS para mostrarlo cuando se pulsa el boton de ver compra */
@@ -257,7 +257,7 @@ a.btn-cart:hover {
   cursor: pointer;
 }
 
-/*------------- 4. INFO USUARIO -------------*/
+/*----------- 4.INFO USUARIO -----------*/
 
 .contenedor-principal {
   padding: 1em;
@@ -296,7 +296,7 @@ a.btn-cart:hover {
   width: 100%;
 }
 
-/*------------- 5.FOOTER -------------*/
+/*-------------- 5.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -356,7 +356,7 @@ footer {
   transition: all 200ms ease-in;
 }
 
-/*------------- 6.UTILS -------------*/
+/*-------------- 6.UTILS --------------*/
 
 .hidden {
   display: none;
@@ -367,7 +367,7 @@ footer {
   transition: color 150ms ease-in;
 }
 
-/*------------- 7.MEDIA RESPONSIVE -------------*/
+/*--------- 7.MEDIA RESPONSIVE --------*/
 
 @media (max-width: 600px) {
   .abr-btn-compra {

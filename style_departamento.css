@@ -63,7 +63,7 @@ más molestos para poder desactivar los efectos de puntero para paliarlo */
   /* pointer-events: none; */
 }
 
-/*---------- 3.LAYOUT PRINCIPAL ----------*/
+/*--------- 3.LAYOUT PRINCIPAL --------*/
 
 .contenedor-principal {
   display: grid;
@@ -103,7 +103,7 @@ más molestos para poder desactivar los efectos de puntero para paliarlo */
   grid-area: listado-productos;
 }
 
-/*------------- 4.HEADER -------------*/
+/*-------------- 4.HEADER -------------*/
 
 header {
   position: sticky;
@@ -250,7 +250,7 @@ a.btn-cart:hover {
   color: var(--red-accent);
 }
 
-/*------------- 4.1.CARRO COMPRA -------------*/
+/*---------- 4.1.CARRO COMPRA ---------*/
 
 .cesta {
   /* falta JS para mostrarlo cuando se pulsa el boton de ver compra */
@@ -316,7 +316,7 @@ a.btn-cart:hover {
   cursor: pointer;
 }
 
-/*-------- 5.COLUMNA DE BUSQUEDA --------*/
+/*------- 5.COLUMNA DE BUSQUEDA -------*/
 
 .columna-busqueda {
   min-width: 200px;
@@ -448,7 +448,7 @@ y modificado para adaptarlo al estilo de la página */
   line-height: 2em;
 }
 
-/*------------- 7.DESTACADAS -------------*/
+/*------------ 7.DESTACADAS -----------*/
 
 .ofertas-destacadas {
   text-align: center;
@@ -469,7 +469,7 @@ y modificado para adaptarlo al estilo de la página */
   padding: 1em;
 }
 
-/*------------- 8.PRODUCTOS -------------*/
+/*------------ 8.PRODUCTOS ------------*/
 
 .selector-orden {
   text-align: right;
@@ -576,7 +576,7 @@ input[type="number"] {
   font-weight: 500;
 }
 
-/*------------- 9.FOOTER -------------*/
+/*-------------- 9.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -635,7 +635,8 @@ footer {
   filter: saturate(100%);
   transition: all 200ms ease-in;
 }
-/*------------- 10.UTILS -------------*/
+
+/*-------------- 10.UTILS -------------*/
 
 .hidden {
   display: none;
@@ -656,7 +657,7 @@ footer {
   transition: color 150ms ease-in;
 }
 
-/*------------- 11.MEDIA RESPONSIVE -------------*/
+/*-------- 11.MEDIA RESPONSIVE --------*/
 
 @media (max-width: 600px) {
   .abr-btn-compra {

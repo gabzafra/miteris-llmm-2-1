@@ -35,7 +35,7 @@ a {
   color: #000;
 }
 
-/*------------- 3.HEADER -------------*/
+/*-------------- 3.HEADER -------------*/
 
 header {
   background-color: #fff;
@@ -53,7 +53,7 @@ header a img {
   width: 100%;
 }
 
-/*---- 4.FORMULARIO REGISTRO / LOGIN ---*/
+/*--- 4.FORMULARIO REGISTRO / LOGIN ---*/
 
 form {
   max-width: 300px;
@@ -94,7 +94,7 @@ form a {
   color: var(--grey-background);
 }
 
-/*------------- 5.FOOTER -------------*/
+/*-------------- 5.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -154,7 +154,7 @@ footer {
   transition: all 200ms ease-in;
 }
 
-/*------------- 6.UTILS -------------*/
+/*-------------- 6.UTILS --------------*/
 
 .danger {
   background-color: var(--red-accent);
@@ -165,7 +165,7 @@ footer {
   transition: all 150ms ease-in;
 }
 
-/*-------- 7.MEDIA RESPONSIVE --------*/
+/*--------- 7.MEDIA RESPONSIVE --------*/
 
 @media (max-width: 700px) {
   .enlaces-ayuda {

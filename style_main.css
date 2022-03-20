@@ -55,7 +55,7 @@ más molestos para poder desactivar los efectos de puntero para paliarlo */
   /* pointer-events: none; */
 }
 
-/*------------- 3.HEADER -------------*/
+/*-------------- 3.HEADER -------------*/
 
 header {
   position: sticky;
@@ -200,7 +200,7 @@ a.btn-cart:hover {
   display: none;
 }
 
-/*------------- 3.1.CARRO COMPRA -------------*/
+/*---------- 3.1.CARRO COMPRA ---------*/
 
 .cesta {
   display: none;
@@ -333,7 +333,7 @@ a.btn-cart:hover {
   color: rgb(142, 85, 85);
 }
 
-/*------------- 5.PRODUCTOS -------------*/
+/*------------ 5.PRODUCTOS ------------*/
 
 .productos-destacados {
   display: flex;
@@ -417,7 +417,7 @@ input[type="number"] {
   font-weight: 400;
 }
 
-/*------------- 6.FOOTER -------------*/
+/*-------------- 6.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -476,7 +476,8 @@ footer {
   filter: saturate(100%);
   transition: all 200ms ease-in;
 }
-/*------------- 7.UTILS -------------*/
+
+/*-------------- 7.UTILS --------------*/
 
 .hidden {
   display: none;
@@ -502,7 +503,7 @@ footer {
   transition: color 150ms ease-in;
 }
 
-/*------------- 8.MEDIA RESPONSIVE -------------*/
+/*--------- 8.MEDIA RESPONSIVE --------*/
 
 @media (max-width: 600px) {
   .abr-btn-compra {
