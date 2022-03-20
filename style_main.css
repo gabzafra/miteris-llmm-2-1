@@ -2,6 +2,7 @@
 	1.IMPORTS
 	2.DEFAULTS
 	3.HEADER
+    3.1.CARRO COMPRA
 	4.OFERTAS
 	5.PRODUCTOS
 	6.FOOTER
@@ -31,21 +32,8 @@ body {
   background: #fff;
 }
 
-h1,
 h3 {
   font-weight: 700;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-h3 {
   color: var(--red-accent);
 }
 
@@ -214,7 +202,7 @@ a.btn-cart:hover {
   display: none;
 }
 
-/*------------- CARRO COMPRA -------------*/
+/*------------- 3.1.CARRO COMPRA -------------*/
 
 .cesta {
   display: none;
@@ -562,7 +550,7 @@ footer {
     color: #fff;
     line-height: 2em;
   }
-  
+
   .ham-menu img,
   .user-icon img {
     display: block;
