@@ -1,12 +1,16 @@
 /*
 	1.IMPORTS
 	2.DEFAULTS
-	3.HEADER
-	4.OFERTAS
-	5.PRODUCTOS
-	6.FOOTER
-  7.UTILS
-  8.MEDIA RESPONSIVE
+  3.LAYOUT PRINCIPAL
+	4.HEADER
+	  4.1.CARRO COMPRA
+  5.COLUMNA DE BUSQUEDA
+	6.OFERTAS
+	7.DESTACADAS
+  8.PRODUCTOS
+  9.FOOTER
+  10.UTILS
+  11.MEDIA RESPONSIVE
 */
 
 /*------------- 1.IMPORTS -------------*/
@@ -31,21 +35,13 @@ body {
   background: #fff;
 }
 
-h1,
-h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 50px;
-}
-
 h2 {
   font-size: 24px;
   font-weight: 500;
 }
 
 h3 {
+  font-weight: 700;
   color: var(--red-accent);
 }
 
@@ -68,7 +64,47 @@ form intente hacer un request para el que no esta preparado y de un 405*/
   pointer-events: none;
 }
 
-/*------------- 3.HEADER -------------*/
+/*---------- 3.LAYOUT PRINCIPAL ----------*/
+
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "columna-busqueda escaparate";
+}
+
+.columna-busqueda {
+  grid-area: columna-busqueda;
+}
+
+.escaparate {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contenedor-ofertas"
+    "ofertas-destacadas"
+    "listado-productos";
+  grid-area: escaparate;
+}
+
+.contenedor-ofertas {
+  grid-area: contenedor-ofertas;
+}
+
+.ofertas-destacadas {
+  grid-area: ofertas-destacadas;
+}
+
+.listado-productos {
+  grid-area: listado-productos;
+}
+
+/*------------- 4.HEADER -------------*/
 
 header {
   position: sticky;
@@ -211,11 +247,11 @@ a.btn-cart:hover {
   padding: 0 2px;
 }
 
-.header-departs .nav-list a{
+.header-departs .nav-list a {
   color: var(--red-accent);
 }
 
-/*------------- CARRO COMPRA -------------*/
+/*------------- 4.1.CARRO COMPRA -------------*/
 
 .cesta {
   /* falta JS para mostrarlo cuando se pulsa el boton de ver compra */
@@ -281,47 +317,7 @@ a.btn-cart:hover {
   cursor: pointer;
 }
 
-/*------------- LAYOUT PRINCIPAL -------------*/
-
-.contenedor-principal {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas: "columna-busqueda escaparate";
-}
-
-.columna-busqueda {
-  grid-area: columna-busqueda;
-}
-
-.escaparate {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "contenedor-ofertas"
-    "ofertas-destacadas"
-    "listado-productos";
-  grid-area: escaparate;
-}
-
-.contenedor-ofertas {
-  grid-area: contenedor-ofertas;
-}
-
-.ofertas-destacadas {
-  grid-area: ofertas-destacadas;
-}
-
-.listado-productos {
-  grid-area: listado-productos;
-}
-
-/*-------- COLUMNA DE BUSQUEDA --------*/
+/*-------- 5.COLUMNA DE BUSQUEDA --------*/
 
 .columna-busqueda {
   min-width: 200px;
@@ -431,7 +427,7 @@ y modificado para adaptarlo al estilo de la página */
   background: #111;
 }
 
-/*------------- 4.OFERTAS -------------*/
+/*------------- 6.OFERTAS -------------*/
 
 .contenedor-ofertas {
   display: none;
@@ -453,7 +449,7 @@ y modificado para adaptarlo al estilo de la página */
   line-height: 2em;
 }
 
-/*------------- 4.DESTACADAS -------------*/
+/*------------- 7.DESTACADAS -------------*/
 
 .ofertas-destacadas {
   text-align: center;
@@ -465,7 +461,6 @@ y modificado para adaptarlo al estilo de la página */
   border-bottom: 1px solid var(--light-gray);
   line-height: 2em;
   color: var(--red-accent);
-
 }
 
 .ofertas-destacadas div.listado-ofertas-destacadas {
@@ -475,14 +470,14 @@ y modificado para adaptarlo al estilo de la página */
   padding: 1em;
 }
 
-/*------------- 5.PRODUCTOS -------------*/
+/*------------- 8.PRODUCTOS -------------*/
 
 .selector-orden {
   text-align: right;
   margin: 0 auto 0.5em auto;
   padding-top: 1em;
   width: 90%;
-  border-top: 1px solid var(--light-gray);  
+  border-top: 1px solid var(--light-gray);
 }
 
 .productos-destacados {
@@ -573,7 +568,7 @@ input[type="number"] {
   border-top: 1px solid var(--light-gray);
   line-height: 2em;
   text-align: center;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 
 .listado-productos .paginas-busqueda a {
@@ -582,7 +577,7 @@ input[type="number"] {
   font-weight: 500;
 }
 
-/*------------- 6.FOOTER -------------*/
+/*------------- 9.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -641,14 +636,10 @@ footer {
   filter: saturate(100%);
   transition: all 200ms ease-in;
 }
-/*------------- 7.UTILS -------------*/
+/*------------- 10.UTILS -------------*/
 
 .hidden {
   display: none;
-}
-
-.accent-red {
-  color: var(--red-accent);
 }
 
 .green-nav {
@@ -661,18 +652,12 @@ footer {
   transition: all 150ms ease-in;
 }
 
-.red-text-hover-glow:hover {
-  color: var(--bright-red);
-  text-shadow: 0px 0px 5px rgba(251, 60, 67, 0.8);
-  transition: color 150ms ease-in;
-}
-
 .gray-text-hover:hover {
   color: var(--light-gray);
   transition: color 150ms ease-in;
 }
 
-/*------------- 8.MEDIA RESPONSIVE -------------*/
+/*------------- 11.MEDIA RESPONSIVE -------------*/
 
 @media (max-width: 600px) {
   .abr-btn-compra {
@@ -700,16 +685,13 @@ footer {
     display: block;
     width: 2em;
   }
-  .accent-red {
-    font-size: 2em;
-  }
 
   /* Sacamos la columna de busqueda para el menu hamburguesa */
   .contenedor-principal {
     grid-template-columns: 1fr;
     grid-template-areas: "escaparate";
   }
-  
+
   .columna-busqueda {
     position: absolute;
     top: 0;
@@ -748,7 +730,6 @@ footer {
   .ofertas-destacadas div.listado-ofertas-destacadas {
     flex-flow: row;
   }
-  
 }
 
 @media (min-width: 700px) {
