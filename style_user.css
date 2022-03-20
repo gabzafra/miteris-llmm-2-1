@@ -2,11 +2,11 @@
 	1.IMPORTS
 	2.DEFAULTS
 	3.HEADER
-	4.OFERTAS
-	5.PRODUCTOS
-	6.FOOTER
-  7.UTILS
-  8.MEDIA RESPONSIVE
+    3.1 CARRO COMPRA
+	4. INFO USUARIO
+	5.FOOTER
+  6.UTILS
+  7.MEDIA RESPONSIVE
 */
 
 /*------------- 1.IMPORTS -------------*/
@@ -20,7 +20,6 @@
   --green-accent: #138d23;
   --grey-background: #f2f2f2;
   --light-gray: #d3d3d3;
-  --bright-red: #ff0008;
 }
 
 body {
@@ -31,22 +30,9 @@ body {
   background: #fff;
 }
 
-h1,
-h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 50px;
-}
-
 h2 {
   font-size: 24px;
   font-weight: 500;
-}
-
-h3 {
-  color: var(--red-accent);
 }
 
 a {
@@ -206,7 +192,7 @@ a.btn-cart:hover {
   text-align: center;
 }
 
-/*------------- CARRO COMPRA -------------*/
+/*------------- 3.1 CARRO COMPRA -------------*/
 
 .cesta {
   /* falta JS para mostrarlo cuando se pulsa el boton de ver compra */
@@ -272,9 +258,7 @@ a.btn-cart:hover {
   cursor: pointer;
 }
 
-/*------------- INFO USUARIO -------------*/
-
-
+/*------------- 4. INFO USUARIO -------------*/
 
 .contenedor-principal {
   padding: 1em;
@@ -309,12 +293,11 @@ a.btn-cart:hover {
   width: 300px;
 }
 
-.datos-usuario img{
+.datos-usuario img {
   width: 100%;
 }
 
-
-/*------------- 6.FOOTER -------------*/
+/*------------- 5.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -373,30 +356,11 @@ footer {
   filter: saturate(100%);
   transition: all 200ms ease-in;
 }
-/*------------- 7.UTILS -------------*/
+
+/*------------- 6.UTILS -------------*/
 
 .hidden {
   display: none;
-}
-
-.accent-red {
-  color: var(--red-accent);
-}
-
-.green-nav {
-  background-color: rgb(198, 225, 161);
-  color: rgb(75, 106, 30);
-}
-
-.dark-hover:hover {
-  filter: brightness(90%);
-  transition: all 150ms ease-in;
-}
-
-.red-text-hover-glow:hover {
-  color: var(--bright-red);
-  text-shadow: 0px 0px 5px rgba(251, 60, 67, 0.8);
-  transition: color 150ms ease-in;
 }
 
 .gray-text-hover:hover {
@@ -404,7 +368,7 @@ footer {
   transition: color 150ms ease-in;
 }
 
-/*------------- 8.MEDIA RESPONSIVE -------------*/
+/*------------- 7.MEDIA RESPONSIVE -------------*/
 
 @media (max-width: 600px) {
   .abr-btn-compra {
