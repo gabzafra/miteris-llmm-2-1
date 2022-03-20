@@ -49,14 +49,13 @@ button {
   border: 0px;
 }
 
-/* Esta clase disabled la he puesto en los forms que no funcionan bien por no poder
-gestionar su comportamiento con JS. Por ejemplo el campo de busqueda deberia usar
-AJAX y los botones + - para establecer la cantidad de productos e incluir productos
-en la cesta necesitan interceptar eventos.
-Se puede quitar para ver el comportamiento del puntero, pero el clickar hara que el
-form intente hacer un request para el que no esta preparado y recargue la página */
+/* Al no estar los formularios con unos request validos hacer click en 
+sus controles hace que la página recarge. He añadido esta clase a los
+más molestos para poder desactivar los efectos de puntero para paliarlo */
+
 .disabled {
-  pointer-events: none;
+  pointer-events: initial;
+  /* pointer-events: none; */
 }
 
 /*------------- 3.HEADER -------------*/
