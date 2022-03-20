@@ -1,4 +1,6 @@
-# miteris-llmm-2-1Para esta actividad he realizado las siguientes vistas:
+# miteris-llmm-2-1
+
+Para esta actividad he realizado las siguientes vistas:
 
 - index.html - El escaparate de la tienda.
 	
