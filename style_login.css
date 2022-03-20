@@ -2,11 +2,10 @@
 	1.IMPORTS
 	2.DEFAULTS
 	3.HEADER
-	4.OFERTAS
-	5.PRODUCTOS
-	6.FOOTER
-  7.UTILS
-  8.MEDIA RESPONSIVE
+	4.FORMULARIO REGISTRO / LOGIN
+	5.FOOTER
+  6.UTILS
+  7.MEDIA RESPONSIVE
 */
 
 /*------------- 1.IMPORTS -------------*/
@@ -31,41 +30,9 @@ body {
   background: #fff;
 }
 
-h1,
-h3 {
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 500;
-}
-
-h3 {
-  color: var(--red-accent);
-}
-
 a {
   text-decoration: none;
   color: #000;
-}
-
-button {
-  border: 0px;
-}
-
-/* Esta clase disabled la he puesto en los forms que no funcionan bien por no poder
-gestionar su comportamiento con JS. Por ejemplo el campo de busqueda deberia usar
-AJAX y los botones + - para establecer la cantidad de productos e incluir productos
-en la cesta necesitan interceptar eventos.
-Se puede quitar para ver el comportamiento del puntero, pero el clickar hara que el
-form intente hacer un request para el que no esta preparado y recargue la página */
-.disabled {
-  pointer-events: none;
 }
 
 /*------------- 3.HEADER -------------*/
@@ -79,14 +46,14 @@ header {
 header a {
   display: block;
   margin: 0 auto;
-  width: 15%
+  width: 15%;
 }
 
 header a img {
   width: 100%;
 }
 
-/*-------- FORMULARIO REGISTRO -------*/
+/*---- 4.FORMULARIO REGISTRO / LOGIN ---*/
 
 form {
   max-width: 300px;
@@ -107,14 +74,14 @@ form input {
   padding: 1em;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   background-color: var(--green-accent);
   color: var(--grey-background);
   padding: 0.5em;
   margin-top: 1em;
 }
 
-form input[type=submit]:hover {
+form input[type="submit"]:hover {
   cursor: pointer;
 }
 
@@ -123,10 +90,11 @@ form a {
   font-size: 1.1em;
   padding: 0.6em;
   margin-top: 1em;
-  background-color: rgb(45, 56, 200);
+  background-color: rgb(32, 97, 172);
   color: var(--grey-background);
 }
-/*------------- 6.FOOTER -------------*/
+
+/*------------- 5.FOOTER -------------*/
 
 footer {
   background-color: #fff;
@@ -185,23 +153,11 @@ footer {
   filter: saturate(100%);
   transition: all 200ms ease-in;
 }
-/*------------- 7.UTILS -------------*/
+
+/*------------- 6.UTILS -------------*/
 
 .danger {
   background-color: var(--red-accent);
-}
-
-.hidden {
-  display: none;
-}
-
-.accent-red {
-  color: var(--red-accent);
-}
-
-.green-nav {
-  background-color: rgb(198, 225, 161);
-  color: rgb(75, 106, 30);
 }
 
 .dark-hover:hover {
@@ -209,18 +165,7 @@ footer {
   transition: all 150ms ease-in;
 }
 
-.red-text-hover-glow:hover {
-  color: var(--bright-red);
-  text-shadow: 0px 0px 5px rgba(251, 60, 67, 0.8);
-  transition: color 150ms ease-in;
-}
-
-.gray-text-hover:hover {
-  color: var(--light-gray);
-  transition: color 150ms ease-in;
-}
-
-/*------------- 8.MEDIA RESPONSIVE -------------*/
+/*-------- 7.MEDIA RESPONSIVE --------*/
 
 @media (max-width: 700px) {
   .enlaces-ayuda {
